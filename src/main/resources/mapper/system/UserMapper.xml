@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.gofl.system.dao.UserMapper">
+
+    <!--*************************************************************
+
+                    SQL 片段
+
+    *****************************************************************-->
+
+    <sql id="BASE_USER_COLUMN">
+        user_id, username, realname, sex, birth, password, email, mobile, mobile2, live_addr,
+        province, city, district, dept_id, pic_url, status, create_time, modify_time
+    </sql>
+
+    <!--*************************************************************
+
+                    ResultMap 映射
+
+    *****************************************************************-->
+    <resultMap id="BASE_RESULT_MAP" type="cn.gofl.system.domain.UserDO">
+        <result property="userId" column="user_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="username" column="username" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="realname" column="realname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" javaType="java.lang.Character" jdbcType="CHAR"/>
+        <result property="birth" column="birth" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result property="password" column="password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="email" column="email" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="mobile" column="mobile" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="liveAddr" column="live_addr" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="province" column="province" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="city" column="city" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="district" column="district" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="deptId" column="dept_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="picUrl" column="pic_url" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="status" column="status" javaType="java.lang.Character" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result property="modifyTime" column="modify_time" javaType="java.lang.Long" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <!--*************************************************************
+
+                    查询
+
+    *****************************************************************-->
+
+    <select id="list" parameterType="java.util.HashMap" resultMap="BASE_RESULT_MAP">
+      SELECT
+        <include refid="BASE_USER_COLUMN"/>
+      FROM  sys_user
+    </select>
+
+
+</mapper>

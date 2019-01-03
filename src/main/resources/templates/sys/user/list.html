@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head th:include="_include :: head"></head>
+
+<body class="hold-transition skin-blue sidebar-mini fixed">
+
+<div class="wrapper">
+
+    <header th:replace="/layout/_header :: header"></header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside th:replace="/layout/_sidebar :: sidebar"></aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <!--<div th:replace="/layout/_content :: content"></div>-->
+    <!-- /.content-wrapper -->
+
+    <footer th:replace="/layout/_footer :: footer"></footer>
+
+    <!-- Control Sidebar -->
+    <aside th:replace="/layout/_functionbar :: control_sidebar"></aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+
+</div>
+<!-- ./wrapper -->
+
+<div th:include="_include :: foot"></div>
+</body>
+</html>
