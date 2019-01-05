@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">登录</p>
 
-    <form action="index.html" method="post" th:action="@{/index}">
+    <form id="loginForm">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="username" placeholder="Username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -55,7 +55,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" id="login" class="btn btn-primary btn-block btn-flat">登  录</button>
+          <button type="button" id="login" class="btn btn-primary btn-block btn-flat">登  录</button>
         </div>
         <!-- /.col -->
       </div>
@@ -67,16 +67,18 @@
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
-
+<script th:inline="javascript"> var ctx = [[@{/}]] ; </script>
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
-<!-- login -->
-<script src="login/login.js"></script>
-<script>
+<!-- layer -->
+<script src="plugins/layer/layer.js"></script>
+<!--<script src="login/login.js"></script>-->
+
+<script type="text/javascript">
   $(function () {
     $('input').iCheck({
       checkboxClass: 'icheckbox_square-blue',
@@ -84,6 +86,29 @@
       increaseArea: '20%' /* optional */
     });
   });
+
+  $("#login").click(function () {
+    $.ajax({
+      type: "POST",
+      url: ctx+"login",
+      data: $("#loginForm").serialize(),
+      dataType: "json",
+      async: false,
+      success: function (data) {
+        if (data.code == 0){
+          layer.load(1);
+          parent.location.href="/admin";
+        } else {
+          layer.msg(data.msg);
+        }
+      },
+      error: function () {
+        layer.msg("登录失败");
+      }
+    })
+  });
+
+
 </script>
 </body>
 </html>

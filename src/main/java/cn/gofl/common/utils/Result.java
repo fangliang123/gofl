@@ -28,6 +28,13 @@ public class Result extends HashMap<String, Object> {
         return result;
     }
 
+    public static Result ok () {
+        Result result = new Result();
+        result.put("code", 0);
+        result.put("msg", "success");
+        return  result;
+    }
+
     public static Result ok (Map<String, Object> map) {
         Result result = new Result();
         result.put("code", 0);

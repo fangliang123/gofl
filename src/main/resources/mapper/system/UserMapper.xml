@@ -45,6 +45,15 @@
 
     *****************************************************************-->
 
+    <!--查询用户记录数-->
+    <select id="count" resultType="int">
+        SELECT
+          COUNT(user_id)
+        FROM
+          sys_user
+    </select>
+
+    <!--查询用户记录-->
     <select id="list" parameterType="java.util.HashMap" resultMap="BASE_RESULT_MAP">
       SELECT
         <include refid="BASE_USER_COLUMN"/>

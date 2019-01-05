@@ -14,7 +14,7 @@ public class FilterChain  {
     private static LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
     public static LinkedHashMap<String, String> getChain (){
-        filterChainDefinitionMap.put("/index",ANON);
+        filterChainDefinitionMap.put("/test",ANON); // 测试
         filterChainDefinitionMap.put("/bower_components/**",ANON);
         filterChainDefinitionMap.put("/build/**",ANON);
         filterChainDefinitionMap.put("/dist/**",ANON);
