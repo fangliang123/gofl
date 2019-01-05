@@ -17,6 +17,8 @@ public class Query extends LinkedHashMap<String, Object> {
 
     private int limit;
 
+    public Query (){}
+
     public Query (Map<String, Object> params) {
         this.offset = (Integer) params.get("offset");
         this.limit = (Integer) params.get("limit");

@@ -1,6 +1,7 @@
 package cn.gofl.system.realm;
 
 import cn.gofl.common.config.ApplicationContextRegister;
+import cn.gofl.common.utils.Query;
 import cn.gofl.system.dao.UserMapper;
 import cn.gofl.system.domain.UserDO;
 import org.apache.shiro.authc.*;
@@ -9,6 +10,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -37,7 +39,7 @@ public class UserRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String username = (String) token.getPrincipal();
         String password = new String ((char[]) token.getCredentials());
-        Map<String, Object> param = new HashMap<>();
+        Query param = new Query();
         param.put("username", username);
         UserMapper userMapper = ApplicationContextRegister.getBean(UserMapper.class);
         //查询用户信息
