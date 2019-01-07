@@ -13,9 +13,9 @@ public class Query extends LinkedHashMap<String, Object> {
 
     private static final long serialVersionUID = 1L;
 
-    private int offset;
+    private int offset = 0;
 
-    private int limit;
+    private int limit = 10;
 
     public Query (){}
 

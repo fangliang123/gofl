@@ -19,7 +19,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/list")
+
+    @GetMapping("/userlist")
+    public String test_index () {
+        return "/sys/user/list";
+    }
+
+    @PostMapping(value = "/list")
     @ResponseBody
     public Page<UserDO> list (@RequestParam Map<String, Object> params) {
         //请求参数校验，分页信息

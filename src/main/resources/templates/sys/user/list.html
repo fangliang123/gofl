@@ -14,6 +14,77 @@
 
     <!-- Content Wrapper. Contains page content -->
     <!--<div th:replace="/layout/_content :: content"></div>-->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Data Tables
+                <small>advanced tables</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#">Tables</a></li>
+                <li class="active">Data tables</li>
+            </ol>
+        </section>
+
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box box-success">
+                        <div class="box-header with-border">
+                            <h6 class="box-title">查询条件</h6>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form class="form-horizontal" action="/test" method="post">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-4 control-label" type="text">用户名</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control"/>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <label class="col-md-4 control-label" type="text">性别</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-5 control-label" type="text">出生日期</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <button class="btn btn-info pull-right">查询</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <table id="userList"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
     <!-- /.content-wrapper -->
 
     <footer th:replace="/layout/_footer :: footer"></footer>
@@ -21,13 +92,12 @@
     <!-- Control Sidebar -->
     <aside th:replace="/layout/_functionbar :: control_sidebar"></aside>
     <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
 
 </div>
 <!-- ./wrapper -->
 
 <div th:replace="/_include :: foot"></div>
+<script src="/system/user/user.js"></script>
 </body>
 </html>

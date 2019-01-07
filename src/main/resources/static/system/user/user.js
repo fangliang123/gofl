@@ -1,15 +1,17 @@
 var prefix_url = "sys/user";
 
+var test_url = "/";
+
 //加载
 $(function () {
-    tableLoad();
+    listTableLoad();
 });
 
 //user-table数据加载
-function tableLoad() {
-    $("#userTable").bootstrapTable({
-        method : 'POST', // 服务器数据的请求方式 get or post
-        url : prefix_url + "/list", // 服务器数据的加载地址
+function listTableLoad() {
+    $("#userList").bootstrapTable({
+        method : 'post', // 服务器数据的请求方式 get or post
+        url : test_url + "list", // 服务器数据的加载地址
         showRefresh : true,
         // showToggle : true,
         // showColumns : true,
@@ -32,8 +34,8 @@ function tableLoad() {
             return {
                 // 说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
                 limit : params.limit,
-                offset : params.offset,
-                name : $('#searchName').val()
+                offset : params.offset
+                // name : $('#searchName').val()
             };
         },
         // //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
@@ -42,6 +44,5 @@ function tableLoad() {
         // pageSize, pageNumber, searchText, sortName,
         // sortOrder.
         // 返回false将会终止请求
-
     })
 }
