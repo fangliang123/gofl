@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -32,10 +33,12 @@ public class LoginController {
 
 
     @RequestMapping({"/admin"})
-    public String index (Model model) {
+    public String index (Model model, HttpServletRequest request) {
         model.addAttribute("username","fangliang");
         List<Tree<MenuDO>> trees =  menuService.listMenuByUId("0");
-        model.addAttribute("menus", trees);
+//        model.addAttribute("menus", trees);
+        request.getSession().setAttribute("username", "FangLiang");
+        request.getSession().setAttribute("menus", trees);
         return "index";
     }
 

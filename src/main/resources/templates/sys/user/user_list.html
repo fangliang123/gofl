@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<html>
-
-<head th:replace="/_include :: head"></head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
 
 <body class="hold-transition skin-blue sidebar-mini fixed">
 
-<div class="wrapper">
-
-    <header th:replace="/layout/_header :: header"></header>
-
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside th:replace="/layout/_sidebar :: sidebar"></aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <!--<div th:replace="/layout/_content :: content"></div>-->
-    <div class="content-wrapper">
+    <div class="content" layout:fragment="content">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
@@ -82,17 +74,8 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
-    <!-- /.content-wrapper -->
-
-    <footer th:replace="/layout/_footer :: footer"></footer>
-
-    <!-- Control Sidebar -->
-    <aside th:replace="/layout/_functionbar :: control_sidebar"></aside>
-    <!-- /.control-sidebar -->
-    <div class="control-sidebar-bg"></div>
 
 </div>
 <!-- ./wrapper -->

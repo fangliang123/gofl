@@ -27,7 +27,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       username: root
-      password: 123
+      password: root
       minimum-idle: 5
       maximum-pool-size: 15
       auto-commit: true
@@ -47,7 +47,6 @@ spring:
 #######################################################
 #                 logging config                      #
 #######################################################
-
 
 
 #######################################################

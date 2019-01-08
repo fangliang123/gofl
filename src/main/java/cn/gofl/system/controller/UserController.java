@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @Controller
-//@RequestMapping("/sys/user")
+@RequestMapping("/sys/user")
 public class UserController {
 
     private String URL_PREFIEX = "/sys/user";
@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping("/userlist")
     public String test_index () {
-        return "/sys/user/list";
+        return "/sys/user/user_list";
     }
 
     @PostMapping(value = "/list")

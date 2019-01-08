@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.thymeleaf.org">
+
+    <head th:replace="layout/_include :: head"></head>
+
+    <body class="hold-transition skin-blue sidebar-mini fixed">
+        <div class="wrapper">
+            <header th:replace="layout/_header :: header"></header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside th:replace="layout/_sidebar :: sidebar"></aside>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <div layout:fragment="content"></div>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer th:replace="layout/_footer :: footer"></footer>
+            <!-- Control Sidebar -->
+            <aside th:replace="layout/_functionbar :: control_sidebar"></aside>
+            <!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+            <div class="control-sidebar-bg"></div>
+        </div>
+        <!-- ./wrapper -->
+        <div th:replace="layout/_include :: foot"></div>
+    </body>
+</html>
