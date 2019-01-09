@@ -30,8 +30,6 @@ public class LoginController {
     @Autowired
     private MenuService menuService;
 
-
-
     @RequestMapping({"/admin"})
     public String index (Model model, HttpServletRequest request) {
         model.addAttribute("username","fangliang");
@@ -44,7 +42,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login () {
-        return "login";
+        return "/login";
     }
 
     @PostMapping(value = "/login")

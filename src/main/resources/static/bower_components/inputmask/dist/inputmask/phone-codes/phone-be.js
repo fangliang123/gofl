@@ -124,7 +124,7 @@
                 cd: "Belgium",
                 city: "Liège (Luik)"
             }, {
-                mask: "+32(15)##-##-##",
+                mask: "+32(data-tables)##-##-##",
                 cc: "BE",
                 cd: "Belgium",
                 city: "Mechelen (Malines)"

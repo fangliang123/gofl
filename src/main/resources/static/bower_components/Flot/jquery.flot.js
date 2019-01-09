@@ -533,7 +533,7 @@ Licensed under the MIT license.
                     mode: null, // null or "time"
                     font: null, // null (derived from CSS in placeholder) or object like { size: 11, lineHeight: 13, style: "italic", weight: "bold", family: "sans-serif", variant: "small-caps" }
                     color: null, // base color, labels, ticks
-                    tickColor: null, // possibly different color of ticks, e.g. "rgba(0,0,0,0.15)"
+                    tickColor: null, // possibly different color of ticks, e.g. "rgba(0,0,0,0.data-tables)"
                     transform: null, // null or f: number -> number to transform axis
                     inverseTransform: null, // if transform is set, this should be the inverse function
                     min: null, // min. value to show, null means set automatically
@@ -594,7 +594,7 @@ Licensed under the MIT license.
                     color: "#545454", // primary color used for outline and labels
                     backgroundColor: null, // null for transparent, else color
                     borderColor: null, // set if different from the grid color
-                    tickColor: null, // color for the ticks, e.g. "rgba(0,0,0,0.15)"
+                    tickColor: null, // color for the ticks, e.g. "rgba(0,0,0,0.data-tables)"
                     margin: 0, // distance from the canvas edge to the grid
                     labelMargin: 5, // in pixels
                     axisMargin: 8, // in pixels

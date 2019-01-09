@@ -25,11 +25,14 @@ public class UserController {
         return "/sys/user/user_list";
     }
 
-    @PostMapping(value = "/list")
+    @PostMapping(value = "/list", produces = "application/json;charset=utf-8")
     @ResponseBody
     public Page<UserDO> list (@RequestParam Map<String, Object> params) {
         //请求参数校验，分页信息
-        Query query = new Query(params);
+        Query query = new Query();
+        System.out.println(params);
+        System.out.println(query.getDraw()+"***"+query.getStart()+"***"+query.getLength());
+        System.out.println(userService.listPage(query));
         return userService.listPage(query);
     }
 

@@ -52,7 +52,7 @@
     platform: "Windows 8.1"
   },
 
-  # Win Opera 15+ not currently supported by Sauce Labs
+  # Win Opera data-tables+ not currently supported by Sauce Labs
 
   {
     browserName: "iphone",

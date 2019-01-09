@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <form class="form-horizontal" action="/test" method="post">
+                            <form id="searchForm" class="form-horizontal" action="/test" method="post">
                                 <div class="col-md-4 form-group">
                                     <label class="col-md-4 control-label" type="text">用户名</label>
                                     <div class="col-md-8">
@@ -69,18 +69,17 @@
                 <div class="col-xs-12">
                     <div class="box box-default">
                         <div class="box-body">
-                            <table id="userList"></table>
+                            <table class="table table-bordered table-hover" id="userList">
+
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script type="text/javascript"
+                th:src="@{/system/user/user_list.js}"></script>
     </div>
-
-</div>
 <!-- ./wrapper -->
-
-<div th:replace="/_include :: foot"></div>
-<script src="/system/user/user.js"></script>
 </body>
 </html>

@@ -138,7 +138,7 @@ body {
 
 /**
  * (1): approximate for browsers not supporting calc
- * (2): 42 = 2*15 + 2*10 + 2*1 (padding + margin + border)
+ * (2): 42 = 2*data-tables + 2*10 + 2*1 (padding + margin + border)
  *      ^^ seriously
  */
 #mocha .test pre {

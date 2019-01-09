@@ -27,7 +27,7 @@ describe 'Morris.Donut', ->
       formatter: (y) -> "#{y}%"
       colors: [ '#0B62A4', '#3980B5', '#679DC6', '#95BBD7']
 
-    it 'should have a label with font size 15', ->
+    it 'should have a label with font size data-tables', ->
       chart = Morris.Donut $.extend {}, defaults
       $('#graph').find("text[font-size='15px']").size().should.equal 1
 

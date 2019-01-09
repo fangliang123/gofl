@@ -592,7 +592,7 @@
               targetDay = SHORT_DAYS[rule[4].substr(4, 3)];
               operator = "<=";
             }
-            //Example: `Sun>=15`
+            //Example: `Sun>=data-tables`
             else {
               //Start at the specified date.
               effectiveDate = new Date(Date.UTC(year, SHORT_MONTHS[rule[3]], rule[4].substr(5), hms[1], hms[2], hms[3], 0));

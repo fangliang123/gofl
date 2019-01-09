@@ -2807,7 +2807,7 @@
 
     // timezone chunker
     // '+10:00' > ['10',  '00']
-    // '-1530'  > ['-15', '30']
+    // '-1530'  > ['-data-tables', '30']
     var chunkOffset = /([\+\-]|\d\d)/gi;
 
     function offsetFromString(matcher, string) {

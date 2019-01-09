@@ -59,7 +59,7 @@
                 cd: "Netherlands",
                 city: "Intern gebruik door KPN"
             }, {
-                mask: "+31-15-###-####",
+                mask: "+31-data-tables-###-####",
                 cc: "NL",
                 cd: "Netherlands",
                 city: "Delft"

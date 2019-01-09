@@ -3,6 +3,7 @@ package cn.gofl.common.domain;
 import lombok.Data;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,30 +13,41 @@ import java.util.Map;
 @Data
 public class Page<T> {
 
-    private int offset;
-
-    private int limit;
-
-    private int total;
-
-    private Map<String, Object> params;
-
-    private String param;
-
-    private List<T> rows = new ArrayList<>();
+    /**
+     * 请求流水号
+     */
+    private int draw;
 
     /**
-     * 封装page数据
+     * 总记录数(数据库里总共记录数)
+     */
+    private int recordsTotal;
+
+    /**
+     * 过滤后记录数
+     */
+    private int recordsFiltered;
+
+    /**
+     * 数据体信息
+     */
+    private List<T> data = new ArrayList<>();
+
+    /**
+     * page数据封装
      * @param <T>
      * @return
      */
-    public static <T> Page<T> assemble (int total, List<T> rows) {
-        if (total == 0 || rows.size() == 0) {
-           return null;
-        }
+    public static <T> Page<T> assembleData (int draw,
+                                             int recordsTotal,
+                                             int recordsFiltered,
+                                             List<T> data) {
         Page<T> page = new Page<>();
-        page.setTotal(total);
-        page.setRows(rows);
+        page.setDraw(draw);
+        page.setRecordsTotal(recordsTotal);
+        page.setRecordsFiltered(recordsFiltered);
+        page.setData(data);
         return page;
     }
+
 }

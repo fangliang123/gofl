@@ -3,7 +3,6 @@ package cn.gofl.common.utils;
 import lombok.Data;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
  * 请求参数封装
@@ -13,18 +12,36 @@ public class Query extends LinkedHashMap<String, Object> {
 
     private static final long serialVersionUID = 1L;
 
-    private int offset = 0;
+    /**
+     * 绘制计数器
+     */
+    private int draw;
 
-    private int limit = 10;
+    /**
+     * 起始位置
+     */
+    private int start;
+
+    /**
+     * 每页显示
+     */
+    private int length;
+
 
     public Query (){}
 
-    public Query (Map<String, Object> params) {
-        this.offset = (Integer) params.get("offset");
-        this.limit = (Integer) params.get("limit");
-        this.put("offset", offset);
-        this.put("page", offset / limit + 1);
-        this.put("limit", limit);
+    public Query (int drow, int start, int length) {
+        this.draw = drow;
+        this.start = start;
+        this.length = length;
     }
 
+    @Override
+    public String toString() {
+        return "Query{" +
+                "draw=" + draw +
+                ", start=" + start +
+                ", length=" + length +
+                '}';
+    }
 }

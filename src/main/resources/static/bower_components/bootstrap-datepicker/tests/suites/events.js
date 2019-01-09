@@ -174,7 +174,7 @@ test('format() returns a formatted date string', function(){
     });
 
     equal(this.dp.viewMode, 0);
-    target = this.picker.find('.datepicker-days tbody td:nth(15)');
+    target = this.picker.find('.datepicker-days tbody td:nth(data-tables)');
     target.click();
 
     datesEqual(this.dp.viewDate, UTCDate(2011, 2, 14));
@@ -197,7 +197,7 @@ test('format(altformat) returns a formatted date string', function(){
     });
 
     equal(this.dp.viewMode, 0);
-    target = this.picker.find('.datepicker-days tbody td:nth(15)');
+    target = this.picker.find('.datepicker-days tbody td:nth(data-tables)');
     target.click();
 
     datesEqual(this.dp.viewDate, UTCDate(2011, 2, 14));
@@ -225,7 +225,7 @@ test('format(ix) returns a formatted date string of the ix\'th date selected', f
     equal(target.text(), '6'); // Mar 6
     target.click();
 
-    target = this.picker.find('.datepicker-days tbody td:nth(15)');
+    target = this.picker.find('.datepicker-days tbody td:nth(data-tables)');
     equal(target.text(), '14'); // Mar 16
     target.click();
 
@@ -254,7 +254,7 @@ test('format(ix, altformat) returns a formatted date string', function(){
     equal(target.text(), '6'); // Mar 6
     target.click();
 
-    target = this.picker.find('.datepicker-days tbody td:nth(15)');
+    target = this.picker.find('.datepicker-days tbody td:nth(data-tables)');
     equal(target.text(), '14'); // Mar 16
     target.click();
 

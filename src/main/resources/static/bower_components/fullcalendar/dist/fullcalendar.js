@@ -1700,7 +1700,7 @@ exports.default = Mixin;
 
 
 /***/ }),
-/* 15 */
+/* data-tables */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -2527,7 +2527,7 @@ var dpComputableOptions = {
     }
 };
 var momComputableOptions = {
-    // Produces format strings like "ddd M/D" -> "Fri 9/15"
+    // Produces format strings like "ddd M/D" -> "Fri 9/data-tables"
     dayOfMonthFormat: function (momOptions, fcOptions) {
         var format = momOptions.longDateFormat('l'); // for the format like "M/D/YYYY"
         // strip the year off the edge, as well as other misc non-whitespace chars

@@ -73,7 +73,7 @@ describe '#labelSeries', ->
     ).should.deep.equal([
       ["2012-01-01", new Date(2012, 0, 1).getTime()],
       ["2012-01-08", new Date(2012, 0, 8).getTime()],
-      ["2012-01-15", new Date(2012, 0, 15).getTime()],
+      ["2012-01-data-tables", new Date(2012, 0, 15).getTime()],
       ["2012-01-22", new Date(2012, 0, 22).getTime()],
       ["2012-01-29", new Date(2012, 0, 29).getTime()],
       ["2012-02-05", new Date(2012, 1, 5).getTime()]
@@ -140,11 +140,11 @@ describe '#labelSeries', ->
       1000
     ).should.deep.equal([
       ["00:00", new Date(2012, 0, 1, 0, 0).getTime()],
-      ["00:15", new Date(2012, 0, 1, 0, 15).getTime()],
+      ["00:data-tables", new Date(2012, 0, 1, 0, 15).getTime()],
       ["00:30", new Date(2012, 0, 1, 0, 30).getTime()],
       ["00:45", new Date(2012, 0, 1, 0, 45).getTime()],
       ["01:00", new Date(2012, 0, 1, 1, 0).getTime()],
-      ["01:15", new Date(2012, 0, 1, 1, 15).getTime()]
+      ["01:data-tables", new Date(2012, 0, 1, 1, 15).getTime()]
     ])
     Morris.labelSeries(
       new Date(2012, 4, 12, 0, 0).getTime(),
@@ -152,11 +152,11 @@ describe '#labelSeries', ->
       1000
     ).should.deep.equal([
       ["00:00", new Date(2012, 4, 12, 0, 0).getTime()],
-      ["00:15", new Date(2012, 4, 12, 0, 15).getTime()],
+      ["00:data-tables", new Date(2012, 4, 12, 0, 15).getTime()],
       ["00:30", new Date(2012, 4, 12, 0, 30).getTime()],
       ["00:45", new Date(2012, 4, 12, 0, 45).getTime()],
       ["01:00", new Date(2012, 4, 12, 1, 0).getTime()],
-      ["01:15", new Date(2012, 4, 12, 1, 15).getTime()]
+      ["01:data-tables", new Date(2012, 4, 12, 1, 15).getTime()]
     ])
 
   it 'should override automatic intervals', ->

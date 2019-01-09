@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Page<UserDO> listPage(Query query) {
         int total = userMapper.count(query);
-        List<UserDO> rows = userMapper.list(query);
-        return Page.assemble(total, rows);
+        List<UserDO> data = userMapper.list(query);
+        return Page.assembleData(query.getDraw(), total, total, data);
     }
 }

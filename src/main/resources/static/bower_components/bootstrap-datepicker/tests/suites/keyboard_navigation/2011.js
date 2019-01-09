@@ -66,10 +66,10 @@ test('Regression: by day (left/right arrows); left from Mar 1, 2011 should go to
     equal(target.text(), 'February 2011', 'Title is "February 2011"');
 });
 
-test('Regression: by month (shift + left/right arrows); left from Mar 15, 2011 should go to Feb 15, 2011', function(){
+test('Regression: by month (shift + left/right arrows); left from Mar data-tables, 2011 should go to Feb data-tables, 2011', function(){
     var target;
 
-    this.input.val('15-03-2011').datepicker('update');
+    this.input.val('data-tables-03-2011').datepicker('update');
 
     equal(this.dp.viewMode, 0);
     target = this.picker.find('.datepicker-days thead th.datepicker-switch');
@@ -91,9 +91,9 @@ test('Regression: by month (shift + left/right arrows); left from Mar 15, 2011 s
     equal(target.text(), 'February 2011', 'Title is "February 2011"');
 });
 
-test('Regression: by month with view mode = 1 (left/right arrow); left from March 15, 2011 should go to February 15, 2011', function () {
+test('Regression: by month with view mode = 1 (left/right arrow); left from March data-tables, 2011 should go to February data-tables, 2011', function () {
   this.picker.remove();
-  this.input = $('<input type="text" value="15-03-2011">')
+  this.input = $('<input type="text" value="data-tables-03-2011">')
     .appendTo('#qunit-fixture')
     .datepicker({
       format: "dd-mm-yyyy",
@@ -104,7 +104,7 @@ test('Regression: by month with view mode = 1 (left/right arrow); left from Marc
   this.dp = this.input.data('datepicker');
   this.picker = this.dp.picker;
 
-  this.input.val('15-03-2011').datepicker('update');
+  this.input.val('data-tables-03-2011').datepicker('update');
   equal(this.dp.viewMode, 1);
 
   target = this.picker.find('.datepicker-days thead th.datepicker-switch');
@@ -125,9 +125,9 @@ test('Regression: by month with view mode = 1 (left/right arrow); left from Marc
   equal(target.text(), 'February 2011', 'Title is "February 2011"');
 });
 
-test('Regression: by month with view mode = 1 (up/down arrow); down from March 15, 2011 should go to July 15, 2010', function () {
+test('Regression: by month with view mode = 1 (up/down arrow); down from March data-tables, 2011 should go to July data-tables, 2010', function () {
   this.picker.remove();
-  this.input = $('<input type="text" value="15-03-2011">')
+  this.input = $('<input type="text" value="data-tables-03-2011">')
     .appendTo('#qunit-fixture')
     .datepicker({
       format: "dd-mm-yyyy",
@@ -138,7 +138,7 @@ test('Regression: by month with view mode = 1 (up/down arrow); down from March 1
   this.dp = this.input.data('datepicker');
   this.picker = this.dp.picker;
 
-  this.input.val('15-03-2011').datepicker('update');
+  this.input.val('data-tables-03-2011').datepicker('update');
   equal(this.dp.viewMode, 1);
 
   target = this.picker.find('.datepicker-days thead th.datepicker-switch');
@@ -159,9 +159,9 @@ test('Regression: by month with view mode = 1 (up/down arrow); down from March 1
   equal(target.text(), 'July 2011', 'Title is "July 2011"');
 });
 
-test('Regression: by year with view mode = 2 (left/right arrow); left from March 15, 2011 should go to March 15, 2010', function () {
+test('Regression: by year with view mode = 2 (left/right arrow); left from March data-tables, 2011 should go to March data-tables, 2010', function () {
   this.picker.remove();
-  this.input = $('<input type="text" value="15-03-2011">')
+  this.input = $('<input type="text" value="data-tables-03-2011">')
     .appendTo('#qunit-fixture')
     .datepicker({
       format: "dd-mm-yyyy",
@@ -172,7 +172,7 @@ test('Regression: by year with view mode = 2 (left/right arrow); left from March
   this.dp = this.input.data('datepicker');
   this.picker = this.dp.picker;
 
-  this.input.val('15-03-2011').datepicker('update');
+  this.input.val('data-tables-03-2011').datepicker('update');
   equal(this.dp.viewMode, 2);
 
   target = this.picker.find('.datepicker-days thead th.datepicker-switch');
@@ -193,9 +193,9 @@ test('Regression: by year with view mode = 2 (left/right arrow); left from March
   equal(target.text(), 'March 2010', 'Title is "March 2010"');
 });
 
-test('Regression: by year with view mode = 2 (up/down arrow); dows from March 15, 2011 should go to March 15, 2015', function () {
+test('Regression: by year with view mode = 2 (up/down arrow); dows from March data-tables, 2011 should go to March data-tables, 2015', function () {
   this.picker.remove();
-  this.input = $('<input type="text" value="15-03-2011">')
+  this.input = $('<input type="text" value="data-tables-03-2011">')
     .appendTo('#qunit-fixture')
     .datepicker({
       format: "dd-mm-yyyy",
@@ -206,7 +206,7 @@ test('Regression: by year with view mode = 2 (up/down arrow); dows from March 15
   this.dp = this.input.data('datepicker');
   this.picker = this.dp.picker;
 
-  this.input.val('15-03-2011').datepicker('update');
+  this.input.val('data-tables-03-2011').datepicker('update');
   equal(this.dp.viewMode, 2);
 
   target = this.picker.find('.datepicker-days thead th.datepicker-switch');

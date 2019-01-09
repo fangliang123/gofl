@@ -3,7 +3,7 @@
         xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.thymeleaf.org">
 
-    <head th:replace="layout/_include :: head"></head>
+    <head th:include="layout/_include :: head"></head>
 
     <body class="hold-transition skin-blue sidebar-mini fixed">
         <div class="wrapper">
@@ -23,6 +23,6 @@
             <div class="control-sidebar-bg"></div>
         </div>
         <!-- ./wrapper -->
-        <div th:replace="layout/_include :: foot"></div>
+        <div th:include="layout/_include :: foot"></div>
     </body>
 </html>

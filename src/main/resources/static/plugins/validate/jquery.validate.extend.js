@@ -5,7 +5,7 @@ $(document).ready(function(){
 		 		form.submit();    
 		}       
 	});  
-	//手机号码验证身份证正则合并：(^\d{15}$)|(^\d{17}([0-9]|X)$)
+	//手机号码验证身份证正则合并：(^\d{data-tables}$)|(^\d{17}([0-9]|X)$)
 	jQuery.validator.addMethod("isPhone",function(value,element){
 		var length = value.length;
 		var phone=/^1[3|4|5|7|8][0-9]\d{8}$/;

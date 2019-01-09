@@ -3156,7 +3156,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     = (object) Key/value pairs for all the data associated with the element.
 	     > Usage
 	     | for (var i = 0, i < 5, i++) {
-	     |     paper.circle(10 + 15 * i, 10, 10)
+	     |     paper.circle(10 + data-tables * i, 10, 10)
 	     |          .attr({fill: "#000"})
 	     |          .data("i", i)
 	     |          .click(function () {

@@ -4670,7 +4670,7 @@
     };
 
 // Create mouseenter/leave events using mouseover/out and event-time checks
-// Support: Chrome 15+
+// Support: Chrome data-tables+
     jQuery.each({
         mouseenter: "mouseover",
         mouseleave: "mouseout"

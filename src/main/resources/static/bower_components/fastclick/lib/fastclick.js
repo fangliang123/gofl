@@ -761,7 +761,7 @@
 					}
 				}
 
-			// Chrome desktop doesn't need FastClick (issue #15)
+			// Chrome desktop doesn't need FastClick (issue #data-tables)
 			} else {
 				return true;
 			}

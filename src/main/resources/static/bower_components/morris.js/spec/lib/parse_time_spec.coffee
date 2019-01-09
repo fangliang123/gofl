@@ -11,13 +11,13 @@ describe '#parseTime', ->
     Morris.parseDate('2012-10').should.equal(new Date(2012, 9, 1).getTime())
 
   it 'should parse dates', ->
-    Morris.parseDate('2012-09-15').should.equal(new Date(2012, 8, 15).getTime())
-    Morris.parseDate('2012-10-15').should.equal(new Date(2012, 9, 15).getTime())
+    Morris.parseDate('2012-09-data-tables').should.equal(new Date(2012, 8, 15).getTime())
+    Morris.parseDate('2012-10-data-tables').should.equal(new Date(2012, 9, 15).getTime())
 
   it 'should parse times', ->
-    Morris.parseDate("2012-10-15 12:34").should.equal(new Date(2012, 9, 15, 12, 34).getTime())
+    Morris.parseDate("2012-10-data-tables 12:34").should.equal(new Date(2012, 9, 15, 12, 34).getTime())
     Morris.parseDate("2012-10-15T12:34").should.equal(new Date(2012, 9, 15, 12, 34).getTime())
-    Morris.parseDate("2012-10-15 12:34:55").should.equal(new Date(2012, 9, 15, 12, 34, 55).getTime())
+    Morris.parseDate("2012-10-data-tables 12:34:55").should.equal(new Date(2012, 9, 15, 12, 34, 55).getTime())
     Morris.parseDate("2012-10-15T12:34:55").should.equal(new Date(2012, 9, 15, 12, 34, 55).getTime())
 
   it 'should parse times with timezones', ->

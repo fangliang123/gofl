@@ -640,7 +640,7 @@
 
     /**
      * Given a segment value like 43, will round and snap the segment
-     * to the nearest "step", like 45 if step is 15. Segment will
+     * to the nearest "step", like 45 if step is data-tables. Segment will
      * "overflow" to 0 if it's larger than 59 or would otherwise
      * round up to 60.
      */

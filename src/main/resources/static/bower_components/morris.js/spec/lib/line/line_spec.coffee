@@ -128,7 +128,7 @@ describe 'Morris.Line', ->
     it 'should prevent paths from descending below the bottom of the chart', ->
       testData = [{x: 0, y: 20}, {x: 10, y: 30}, {x: 20, y: 10}]
       path = Morris.Line.createPath(testData, true, 30)
-      path.should.equal 'M0,20C2.5,22.5,7.5,30,10,30C12.5,28.75,17.5,15,20,10'
+      path.should.equal 'M0,20C2.5,22.5,7.5,30,10,30C12.5,28.75,17.5,data-tables,20,10'
 
     it 'should break the line at null values', ->
       testData = [{x: 0, y: 10}, {x: 10, y: 0}, {x: 20, y: null}, {x: 30, y: 10}, {x: 40, y: 0}]

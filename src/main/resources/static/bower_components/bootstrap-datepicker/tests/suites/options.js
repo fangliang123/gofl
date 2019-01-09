@@ -384,7 +384,7 @@ test('Today Highlight: today\'s date is not highlighted by default', patch_date(
     ok(picker.find('.datepicker-days').is(':visible'), 'Days view visible');
     equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'March 2012', 'Title is "March 2012"');
 
-    target = picker.find('.datepicker-days tbody td:contains(15)');
+    target = picker.find('.datepicker-days tbody td:contains(data-tables)');
     ok(!target.hasClass('today'), 'Today is not marked with "today" class');
     target = picker.find('.datepicker-days tbody td:contains(14)');
     ok(!target.hasClass('today'), 'Yesterday is not marked with "today" class');
@@ -409,7 +409,7 @@ test('Today Highlight: today\'s date is highlighted when not active', patch_date
     ok(picker.find('.datepicker-days').is(':visible'), 'Days view visible');
     equal(picker.find('.datepicker-days thead .datepicker-switch').text(), 'March 2012', 'Title is "March 2012"');
 
-    target = picker.find('.datepicker-days tbody td:contains(15)');
+    target = picker.find('.datepicker-days tbody td:contains(data-tables)');
     ok(target.hasClass('today'), 'Today is marked with "today" class');
     target = picker.find('.datepicker-days tbody td:contains(14)');
     ok(!target.hasClass('today'), 'Yesterday is not marked with "today" class');
@@ -1138,7 +1138,7 @@ test('Multidate', function(){
     equal(input.val(), '2012-03-05,2012-03-04');
 
     // Select second
-    target = picker.find('.datepicker-days tbody td:nth(15)');
+    target = picker.find('.datepicker-days tbody td:nth(data-tables)');
     equal(target.text(), '12'); // Mar 12
 
     target.click();
@@ -1183,7 +1183,7 @@ test('Multidate with limit', function(){
     equal(input.val(), '2012-03-05,2012-03-04');
 
     // Select second
-    target = picker.find('.datepicker-days tbody td:nth(15)');
+    target = picker.find('.datepicker-days tbody td:nth(data-tables)');
     equal(target.text(), '12'); // Mar 12
 
     target.click();
@@ -1225,7 +1225,7 @@ test('Multidate Separator', function(){
     equal(input.val(), '2012-03-05 2012-03-04');
 
     // Select second
-    target = picker.find('.datepicker-days tbody td:nth(15)');
+    target = picker.find('.datepicker-days tbody td:nth(data-tables)');
     equal(target.text(), '12'); // Mar 12
 
     target.click();

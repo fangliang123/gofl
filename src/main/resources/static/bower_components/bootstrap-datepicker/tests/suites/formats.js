@@ -1,7 +1,7 @@
 module('Formats', {
     setup: function(){
         this.input = $('<input type="text">').appendTo('#qunit-fixture');
-        this.date = UTCDate(2012, 2, 15, 0, 0, 0, 0); // March 15, 2012
+        this.date = UTCDate(2012, 2, 15, 0, 0, 0, 0); // March data-tables, 2012
     },
     teardown: function(){
         this.input.data('datepicker').picker.remove();
@@ -196,7 +196,7 @@ test('+1m: Next month', patch_date(function(Date){
         .val('+1m')
         .datepicker({format: 'dd-mm-yyyy'})
         .datepicker('setValue');
-    equal(this.input.val(), '15-04-2012');
+    equal(this.input.val(), 'data-tables-04-2012');
 }));
 
 test('-1m: Last month', patch_date(function(Date){
@@ -205,7 +205,7 @@ test('-1m: Last month', patch_date(function(Date){
         .val('-1m')
         .datepicker({format: 'dd-mm-yyyy'})
         .datepicker('setValue');
-    equal(this.input.val(), '15-02-2012');
+    equal(this.input.val(), 'data-tables-02-2012');
 }));
 
 test('+1y: Next year', patch_date(function(Date){
@@ -214,7 +214,7 @@ test('+1y: Next year', patch_date(function(Date){
         .val('+1y')
         .datepicker({format: 'dd-mm-yyyy'})
         .datepicker('setValue');
-    equal(this.input.val(), '15-03-2013');
+    equal(this.input.val(), 'data-tables-03-2013');
 }));
 
 test('-1y: Last year', patch_date(function(Date){
@@ -223,7 +223,7 @@ test('-1y: Last year', patch_date(function(Date){
         .val('-1y')
         .datepicker({format: 'dd-mm-yyyy'})
         .datepicker('setValue');
-    equal(this.input.val(), '15-03-2011');
+    equal(this.input.val(), 'data-tables-03-2011');
 }));
 
 test('-1y +2m: Multiformat', patch_date(function(Date){
@@ -232,7 +232,7 @@ test('-1y +2m: Multiformat', patch_date(function(Date){
         .val('-1y +2m')
         .datepicker({format: 'dd-mm-yyyy'})
         .datepicker('setValue');
-    equal(this.input.val(), '15-05-2011');
+    equal(this.input.val(), 'data-tables-05-2011');
 }));
 
 test('Regression: End-of-month bug', patch_date(function(Date){

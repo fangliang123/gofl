@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css"
     th:href="@{'/dist/css/skins/_all-skins.min.css'}">
 
+    <!--<link rel="stylesheet" href="/plugins/bootstrap-table/bootstrap-table.min.css"
+    th:href="@{/plugins/bootstrap-table/bootstrap-table.min.css}">-->
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,10 +41,10 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
           th:href="@{https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic}">
-</head>
 
-<!--foot js include-->
-<div th:fragment="foot">    <!-- jQuery 3 -->
+
+
+    <!-- jQuery 3 -->
     <script src="bower_components/jquery/dist/jquery.min.js"
             th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
     <!-- Bootstrap 3.3.7 -->
@@ -55,12 +58,7 @@
             th:src="@{/dist/js/adminlte.min.js}"></script>
     <!-- Sparkline -->
     <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"
-            th:src="@{/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js}"></script>
-    <!-- jvectormap  -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"
-            th:src="@{/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js}"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"
-            th:src="@{/plugins/jvectormap/jquery-jvectormap-world-mill-en.js}"></script>
+            th:src="@{/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js}"></script>-->
     <!-- SlimScroll -->
     <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"
             th:src="@{/bower_components/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
@@ -70,7 +68,14 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard2.js"
             th:src="@{/dist/js/pages/dashboard2.js}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"
-            th:src="@{/dist/js/demo.js}"></script>
+    <script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"
+            th:src="@{/bower_components/datatables.net/js/jquery.dataTables.min.js}"></script>
+    <script src="/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"
+            th:src="@{/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js}"></script>
+    <
+</head>
+
+<!--foot js include-->
+<div th:fragment="foot">
+
 </div>
