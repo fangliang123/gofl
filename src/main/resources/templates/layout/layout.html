@@ -11,8 +11,8 @@
             <!-- Left side column. contains the logo and sidebar -->
             <aside th:replace="layout/_sidebar :: sidebar"></aside>
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
-                <div layout:fragment="content"></div>
+            <div layout:fragment="content">
+                <!--<div layout:fragment="content"></div>-->
             </div>
             <!-- /.content-wrapper -->
             <footer th:replace="layout/_footer :: footer"></footer>
@@ -23,6 +23,6 @@
             <div class="control-sidebar-bg"></div>
         </div>
         <!-- ./wrapper -->
-        <div th:include="layout/_include :: foot"></div>
+        <!--<div th:include="layout/_include :: foot"></div>-->
     </body>
 </html>
