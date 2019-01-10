@@ -15,7 +15,7 @@ public class FilterChain  {
 
     public static LinkedHashMap<String, String> getChain (){
         filterChainDefinitionMap.put("/admin",ANON); // 主页
-        filterChainDefinitionMap.put("/sys/user/userlist",ANON); // 主页
+        filterChainDefinitionMap.put("/sys/user/listData",ANON); // 主页
         filterChainDefinitionMap.put("/sys/user/list",ANON); // 主页
         filterChainDefinitionMap.put("/test",ANON); // 测试
         filterChainDefinitionMap.put("/bower_components/**",ANON);

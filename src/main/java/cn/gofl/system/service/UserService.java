@@ -1,8 +1,9 @@
 package cn.gofl.system.service;
 
 import cn.gofl.common.domain.Page;
-import cn.gofl.common.utils.Query;
 import cn.gofl.system.domain.UserDO;
+
+import java.util.Map;
 
 
 /**
@@ -15,5 +16,5 @@ public interface UserService {
      * @param query
      * @return
      */
-    Page<UserDO> listPage (Query query);
+    Page<UserDO> listPage (Map<String, Object> query);
 }
