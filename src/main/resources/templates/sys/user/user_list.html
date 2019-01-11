@@ -4,6 +4,14 @@
       xmlns:layout="http://www.thymeleaf.org"
       layout:decorator="layout/layout">
 
+<head>
+    <link rel="stylesheet"
+          th:href="@{/plugins/jqueryUI/css/jquery-ui.min.css}">
+    <!--JqGrid base style-->
+    <link rel="stylesheet"
+          th:href="@{/plugins/jQuery_jqGrid/css/ui.jqgrid.min.css}">
+</head>
+
 <body class="hold-transition skin-blue sidebar-mini fixed">
     <div class="content-wrapper" layout:fragment="content">
         <div class="row">
@@ -23,7 +31,19 @@
                         </div>
                     </div>
                     <div class="box-body">
-                        <div id="deptTree"></div>
+                        <div class="widget-box widget-color-green2">
+                            <div class="widget-header">
+                                <h4 class="widget-title lighter smaller">
+                                    Browse Files
+                                </h4>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main padding-8">
+                                    <ul id="tree2"></ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,22 +94,27 @@
                             </div>
                         </form>
                         <div class="col-md-12">
-                            <table id="userList"></table>
+                            <table id="userGridTable"></table>
 
-                            <div id="dataGridPage"></div>
+                            <div id="gridPager"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!--Jquery jqGrid Plugin-->
+        <!-- Jquery jqGrid Plugin-->
         <script type="text/javascript"
-                th:src="@{/plugins/jQuery_jqGrid/js/jquery.jqGrid.js}"></script>
+                th:src="@{/plugins/jQuery_jqGrid/js/jquery.jqGrid.min.js}"></script>
+        <!-- JQuery jqGrid Chinese Support-->
         <script type="text/javascript"
-                th:src="@{/plugins/jQuery_jqGrid/js/jquery.jqGrid.extend.js}"></script>
-        <!--<script type="text/javascript"
-                th:src="@{/plugins/jQuery_jqGrid/js/i18n/grid.locale-cn.js}"></script>-->
+                th:src="@{/plugins/jQuery_jqGrid/i18n/grid.locale-cn.js}"></script>
+        <script type="text/javascript"
+                th:src="@{/plugins/ace/ace_main.min.js}"></script>
+        <script type="text/javascript"
+                th:src="@{/plugins/ace/ace_elements.min.js}"></script>
+        <!-- Tree Plugin -->
+        <script type="text/javascript"
+                th:src="@{/plugins/tree/ace_tree.min.js}"></script>
         <script type="text/javascript"
                 th:src="@{/system/user/user_list.js}"></script>
     </div>

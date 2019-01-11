@@ -48,7 +48,4 @@ public class MD5Util {
         return md5code;
     }
 
-    public static void main(String[] args) {
-        System.out.println(MD5Util.encrypt("admin", "admin"));
-    }
 }
