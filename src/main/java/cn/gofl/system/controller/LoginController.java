@@ -21,9 +21,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 登录控制器
- */
 @Controller
 public class LoginController {
 
@@ -37,7 +34,7 @@ public class LoginController {
 //        model.addAttribute("menus", trees);
         request.getSession().setAttribute("username", "FangLiang");
         request.getSession().setAttribute("menus", trees);
-        return "index";
+        return "admin/admin";
     }
 
     @GetMapping("/login")

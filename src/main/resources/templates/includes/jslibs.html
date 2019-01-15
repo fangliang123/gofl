@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="jslibs(scripts)">
+        <script th:src="@{/common/plugins/ie9/html5shiv.min.js}"></script>
+        <script th:src="@{/common/plugins/ie9/respond.min.js}"></script>
+        <!-- jQuery 2.2.3 -->
+        <script th:src="@{/common/plugins/jQuery/jquery-2.2.3.min.js}"></script>
+        <!-- Bootstrap 3.3.6 -->
+        <script th:src="@{/common/bootstrap/js/bootstrap.min.js}"></script>
+        <!-- Slimscroll -->
+        <script th:src="@{/common/plugins/slimScroll/jquery.slimscroll.min.js}"></script>
+        <!-- FastClick -->
+        <script th:src="@{/common/plugins/fastclick/fastclick.js}"></script>
+        <!-- AdminLTE App -->
+        <script th:src="@{/common/dist/js/app.js}"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script th:src="@{/common/dist/js/demo.js}"></script>
+
+        <!--tabs-->
+        <script th:src="@{/common/dist/js/app.extend.js}"></script>
+
+        <th:block th:replace="${scripts}"/>
+
+        <!--<script src="../dist/js/jquery.blockui.min.js"></script>
+        <script src="../dist/js/appx.js"></script>
+        <script src="../dist/js/bootstrap-tab.js"></script>
+        <script src="../dist/js/sidebarMenu.js"></script>-->
+    </div>
+</body>
+</html>
