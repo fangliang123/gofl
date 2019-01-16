@@ -1,6 +1,6 @@
 
 /**
- * 本地搜索菜单
+ * 本地搜索菜单选项
  */
 function search_menu() {
     //要搜索的值
@@ -28,26 +28,32 @@ function search_menu() {
     });
 }
 
+function getMenus (userId) {
+    $.ajax({
+        type: 'get',
+
+    });
+}
+
+
 $(function () {
 //        console.log(window.location);
 
     App.setbasePath("/");
-
     addTabs({
         id: '10008',
         title: '仪表盘',
         close: false,
         url: '/main'
     });
-
     App.fixIframeCotent();
     var menus = [
-        {
-            id: "9000",
-            text: "header",
-            icon: "",
-            isHeader: true
-        },
+        // {
+        //     id: "9000",
+        //     text: "header",
+        //     icon: "",
+        //     isHeader: true
+        // },
         {
             id: "9001",
             text: "UI Elements",
@@ -126,6 +132,8 @@ $(function () {
             ]
         }
     ];
+    var sidebar = [];
+
     $('.sidebar-menu').sidebarMenu({data: menus, param: {strUser: 'admin'}});
 
 });
