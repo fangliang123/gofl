@@ -12,10 +12,7 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -30,11 +27,19 @@ public class LoginController {
     @RequestMapping({"/admin"})
     public String index (Model model, HttpServletRequest request) {
         model.addAttribute("username","fangliang");
-        List<Tree<MenuDO>> trees =  menuService.listMenuByUId("0");
+//        List<Tree<MenuDO>> trees =  menuService.listMenuByUId("0");
 //        model.addAttribute("menus", trees);
-        request.getSession().setAttribute("username", "FangLiang");
-        request.getSession().setAttribute("menus", trees);
+//        request.getSession().setAttribute("username", "FangLiang");
+//        request.getSession().setAttribute("menus", trees);
         return "admin/admin";
+    }
+
+    @RequestMapping(value = "/admin/getMenus", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
+    public List<Tree<MenuDO>> getMenus (String userId) {
+        List<Tree<MenuDO>>  trees = menuService.listMenuByUId("0");
+        System.out.println(trees);
+        return trees;
     }
 
     @GetMapping("/login")

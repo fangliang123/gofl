@@ -34,4 +34,9 @@ public class Tree <T>{
 
     private List<Tree<T>> children = new ArrayList<>();
 
+    /**
+     * 页面打开类型 iframe-tab
+     */
+    private String targetType = "iframe-tab";
+
 }

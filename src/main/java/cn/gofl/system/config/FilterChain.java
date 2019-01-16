@@ -18,7 +18,7 @@ public class FilterChain  {
      * @return
      */
     public static LinkedHashMap<String, String> getChain (){
-        filterChainDefinitionMap.put("/admin",ANON); // 主页
+        filterChainDefinitionMap.put("/admin/**",ANON); // 主页
         filterChainDefinitionMap.put("/sys/user/listData",ANON); // 主页
         filterChainDefinitionMap.put("/test",ANON); // 测试
         //css js文件位置

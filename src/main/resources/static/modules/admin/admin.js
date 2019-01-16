@@ -1,3 +1,4 @@
+var  prefix = "/admin";
 
 /**
  * 本地搜索菜单选项
@@ -30,11 +31,41 @@ function search_menu() {
 
 function getMenus (userId) {
     $.ajax({
-        type: 'get',
+        url: prefix+'/getMenus',
+        type: 'post',
+        dataType: 'json',
+        data: {'userId':'0'},
+        cache: false,
+        success: function (data) {
+            var menus = [];
+            var Menu = function () {
+                return {
+                    id: '',
+                    text : '',
+                    icon : '',
+                    children: []
+                }
+            };
+            for (var i in data) {
+                var menu = new Menu();
+                menu.id = i.id;
+                menu.text = i.text;
+                menu.icon = i.attrs.icon;
+                for (var j in i.children) {
+                    var child = new Menu();
+                    child.id = j.id;
+                    child.text = j.text;
+                    child.icon = j.attrs.icon;
+                    menu.children.push(child);
+                }
+                menus.push(menu);
+            }
+            $(".sidebar-menu").sidebarMenu({data:menus, param : {strUser : 'admin'}});
+        }
+
 
     });
 }
-
 
 $(function () {
 //        console.log(window.location);
@@ -134,6 +165,7 @@ $(function () {
     ];
     var sidebar = [];
 
-    $('.sidebar-menu').sidebarMenu({data: menus, param: {strUser: 'admin'}});
+    // $('.sidebar-menu').sidebarMenu({data: menus, param: {strUser: 'admin'}});
+    getMenus("0");
 
 });
